@@ -6,7 +6,7 @@ module.exports = app => {
   );
   app.get("/auth/google/callback", passport.authenticate("google"),
    (req,res)=>{
-   res.redirect("/")
+   res.redirect("/home")
    }
 );
 

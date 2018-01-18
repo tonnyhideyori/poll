@@ -1,4 +1,3 @@
-import "materialize-css/dist/css/materialize.min.css";
 import "./css/w3.css";
 import React from "react";
 import ReactDom from "react-dom";

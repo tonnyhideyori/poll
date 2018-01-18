@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-class Landing extends Component {
+class Profile extends Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <h2>Kura na Maswali Fikirishi kwa jamii</h2>
-        <h2>In-depth discussions Perspectives and opinions that matter</h2>
+        <h1>This is your profile</h1>
       </div>
     );
   }
@@ -14,4 +13,4 @@ class Landing extends Component {
 function mapStateToProps({ auth }) {
   return { auth };
 }
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps)(Profile);

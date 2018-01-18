@@ -10,21 +10,20 @@ class Header extends Component {
         return;
       case false:
         return (
-          <li>
+          <li >
             <a href="/auth/google">
-              <button className="waves-effect waves-light btn red">
-                Login with google
-              </button>
+      
+                Login with&nbsp;<i class="fa fa-google-plus color:red"></i>
             </a>
           </li>
         );
       default:
         return [
-          <li key="1">{this.props.auth.name}</li>,
-          <li key="2">
-           <a href="/api/logout" > <button className="waves-effect waves-light btn black white-text">
-              logout
-            </button></a>
+          <li  key="1"><a href="#"><span class="glyphicon glyphicon-user"></span>{this.props.auth.name}</a></li>,
+          <li  key="2">
+           <a href="/api/logout" ><span class="glyphicon glyphicon-log-in"></span>
+              &nbsp; logout
+            </a>
           </li>
         ];
     }
@@ -32,17 +31,23 @@ class Header extends Component {
   render() {
     return (
       <div>
-        {" "}
-        <nav>
-          <div className="nav-wrapper">
-            <a href="#" className="brand-logo">
-              Kura
-            </a>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-                {this.renderContent()}
-            </ul>
-          </div>
-        </nav>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Kura</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        {this.renderContent()}
+      </ul>
+    </div>
+  </div>
+</nav>
       </div>
     );
   }
